@@ -12,6 +12,16 @@ myworkday-starter/
 └── README.md          # Diese Datei
 ```
 
+## Setup
+
+### Java-Version konfigurieren
+Passen Sie die Java-Version in `backend/build.gradle` an Ihre lokale Installation an:
+```gradle
+java {
+    sourceCompatibility = '17'  // oder '11', '21' je nach System
+}
+```
+
 ## Schnellstart
 
 ### Backend starten
