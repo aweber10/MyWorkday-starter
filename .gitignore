@@ -1,0 +1,356 @@
+# MyWorkday Monorepo - Complete .gitignore
+
+###################
+# Backend (Spring Boot / Gradle / Java)
+###################
+
+# Gradle
+backend/.gradle/
+backend/build/
+backend/gradle/wrapper/gradle-wrapper.jar
+backend/gradlew
+backend/gradlew.bat
+backend/out/
+backend/bin/
+
+# Java / Spring Boot
+backend/*.jar
+backend/*.war
+backend/*.ear
+backend/*.class
+backend/.factorypath
+backend/.apt_generated
+backend/.apt_generated_test
+
+# Spring Boot specific
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# H2 Database files (if file-based)
+backend/*.db
+backend/*.mv.db
+backend/*.trace.db
+
+# Logs
+backend/logs/
+backend/*.log
+
+###################
+# Frontend (React / Node.js)
+###################
+
+# Dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# Production builds
+frontend/build/
+frontend/dist/
+frontend/.next/
+
+# Runtime data
+frontend/pids
+frontend/*.pid
+frontend/*.seed
+frontend/*.pid.lock
+
+# Coverage directory used by tools like istanbul
+frontend/coverage/
+frontend/.nyc_output
+
+# Environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Cache
+frontend/.cache/
+frontend/.parcel-cache
+
+# React specific
+frontend/.eslintcache
+
+# Package managers
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/lerna-debug.log*
+frontend/.yarn/cache
+frontend/.yarn/unplugged
+frontend/.yarn/build-state.yml
+frontend/.yarn/install-state.gz
+frontend/.pnp.*
+
+###################
+# E2E Tests (Playwright / Node.js)
+###################
+
+# Dependencies
+e2e-tests/node_modules/
+e2e-tests/.pnp
+e2e-tests/.pnp.js
+
+# Test results and reports
+e2e-tests/test-results/
+e2e-tests/playwright-report/
+e2e-tests/playwright/.cache/
+e2e-tests/coverage/
+
+# Playwright browsers (optional - comment out if you want to cache browsers)
+e2e-tests/.playwright/
+
+# Test artifacts
+e2e-tests/screenshots/
+e2e-tests/videos/
+e2e-tests/traces/
+
+# Repomix outputs
+e2e-tests/repomix-output/
+e2e-tests/context.xml
+e2e-tests/frontend-context.xml
+
+# Environment files
+e2e-tests/.env
+e2e-tests/.env.local
+e2e-tests/.env.test
+
+# Package managers
+e2e-tests/npm-debug.log*
+e2e-tests/yarn-debug.log*
+e2e-tests/yarn-error.log*
+
+###################
+# Root Level Node.js (for workspace management)
+###################
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Package managers
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+###################
+# IDEs and Editors
+###################
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Eclipse
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+###################
+# Operating Systems
+###################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+###################
+# Security & Secrets
+###################
+
+# API Keys and secrets (multiple possible locations)
+secrets/
+.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+**/config/secrets.*
+**/config/application-secrets.*
+
+# Flickr API keys (from Exercise 6)
+**/flickr-api-key.txt
+**/api-keys.txt
+
+###################
+# Development & Build Tools
+###################
+
+# Docker
+.dockerignore
+Dockerfile.local
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Local development
+.local/
+.tmp/
+temp/
+tmp/
+
+###################
+# Documentation & User Stories (Optional - meist should be tracked)
+###################
+
+# Uncomment if you don't want to track temporary documentation
+# docs/temp/
+# docs/draft/
+
+###################
+# Repomix (Context export for AI)
+###################
+
+# Repomix outputs (since they can be regenerated)
+repomix-output/
+*.repomix.xml
+context.xml
+frontend-context.xml
+backend-context.xml
+
+###################
+# CI/CD
+###################
+
+# GitHub Actions (optional - usually tracked)
+# .github/
+
+# Jenkins
+.jenkins/
+
+# CircleCI (optional - usually tracked)  
+# .circleci/
+
+###################
+# Monitoring & Analytics
+###################
+
+# Application monitoring
+newrelic.jar
+elastic-apm-agent.jar
+
+# Analytics
+.vercel
+.netlify
+
+###################
+# Database & Cache
+###################
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db3
+*.s3db
+*.sl3
+
+# Redis dumps
+dump.rdb
+
+# Cache files
+.cache
+cache/
+.temp/
