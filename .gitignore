@@ -7,9 +7,6 @@
 # Gradle
 backend/.gradle/
 backend/build/
-backend/gradle/wrapper/gradle-wrapper.jar
-backend/gradlew
-backend/gradlew.bat
 backend/out/
 backend/bin/
 
